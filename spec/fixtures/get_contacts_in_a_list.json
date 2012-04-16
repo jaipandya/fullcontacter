@@ -1,0 +1,41 @@
+{
+  "data":  {
+    "totalRecords": 2,
+    "totalPages": 1,
+    "currentPage": 1,
+    "count": 2,
+    "contacts":  [
+       {
+        "phoneNumbers":  [
+           {
+            "value": "+1-303-717-0414"
+          }
+        ],
+        "emails":  [
+           {
+            "value": "bart@fullcontact.com",
+            "type": "INTERNET"
+          }
+        ],
+        "id": "W6jcC3xrRF",
+        "eTag": "fffffec9d693ea74b8dea320ebb15ea6c08f65839be1ed22c936a6e9"
+      },
+       {
+        "phoneNumbers":  [
+           {
+            "value": "+1-303-717-0414"
+          }
+        ],
+        "emails":  [
+           {
+            "value": "bart@fullcontact.com",
+            "type": "INTERNET"
+          }
+        ],
+        "id": "jzZrFNsv5s",
+        "eTag": "fffffec9d69df08ded1d2009fc32d0a397820a5482306589e6c09b05"
+      }
+    ]
+  },
+  "status": 200
+}

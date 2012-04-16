@@ -1,0 +1,2 @@
+On fullcontact.com documentation page
+snapshots,subscription - action to be used is 'contactList' and not 'contactLists'

@@ -1,0 +1,10 @@
+{
+  "subscriptions":  [
+     {
+      "id": "bfe3a7f46a37f05622136bd8cb57b1dd1fd20312",
+      "event": "ENRICHED",
+      "callbackUrl": "http://www.example.com"
+    }
+  ],
+  "status": 200
+}
