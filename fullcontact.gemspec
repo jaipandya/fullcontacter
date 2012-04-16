@@ -24,7 +24,7 @@ Gem::Specification.new do |s|
 
   s.executables = `git ls-files -- bin/*`.split("\n").map{|f| File.basename(f)}
   s.files = `git ls-files`.split("\n")
-  s.homepage = 'https://github.com/jaipandya/fullcontact-api-ruby'
+  s.homepage = 'https://github.com/jaipandya/fullcontacter'
   s.name = 'fullcontacter'
   s.require_paths = ['lib']
   s.required_rubygems_version = Gem::Requirement.new('>= 1.3.6')
