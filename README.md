@@ -1,17 +1,19 @@
-FullContact Ruby Gem
-====================
+# FullContact Ruby Gem
+[![Dependency Status](https://gemnasium.com/jaipandya/fullcontacter.png?travis)][gemnasium]
+
 A Ruby wrapper for the [FullContact API](http://www.fullcontact.com/)
 
-Installation
-------------
+[gemnasium]: https://gemnasium.com/jaipandya/fullcontacter
+
+## Installation
     gem install fullcontacter
 
-Documentation
--------------
+## Documentation
 [http://rdoc.info/gems/fullcontacter](http://rdoc.info/gems/fullcontacter)
 
-Usage Examples
---------------
+
+## Usage Examples
+
     require "rubygems"
     require "fullcontact"
     
@@ -35,8 +37,8 @@ Usage Examples
     # Authentication is requred for all methods under the 'Contact' and 'ContactList' categories
     FullContact.get_contact_lists
 
-Copyright
----------
+## Copyright
+
 Copyright (c) 2012 Brandon West, Jai Pandya, Prafulla Kiran
 
 See [LICENSE](https://github.com/jaipandya/fullcontacter/blob/master/LICENSE.md) for details.
