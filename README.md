@@ -33,4 +33,4 @@ Copyright
 ---------
 Copyright (c) 2012 Brandon West, Jai Pandya, Prafulla Kiran
 
-See [LICENSE](https://github.com/jaipandya/fullcontact-ruby-api/blob/master/LICENSE.md) for details.
+See [LICENSE](https://github.com/jaipandya/fullcontacter/blob/master/LICENSE.md) for details.
