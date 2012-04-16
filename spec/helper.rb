@@ -2,7 +2,6 @@ require 'rspec'
 require 'webmock/rspec'
 require 'simplecov'
 require 'lib/fullcontact'
-require 'ruby-debug'
 
 SimpleCov.start
 
