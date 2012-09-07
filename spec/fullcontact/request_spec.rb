@@ -22,4 +22,20 @@ describe FullContact::Request do
     a_post("post/path.json").with(:query => { :apiKey => "api_key"}).should have_been_made.once
   end
 
+  describe "get_request_url_only" do
+    before do
+      FullContact.configure do |config|
+        config.get_request_url_only = true
+      end
+    end
+    after do
+      FullContact.configure do |config|
+        config.get_request_url_only = false
+      end
+    end
+
+    it "returns the url when called with get_request_url_only" do
+      client.send(:request,:post, "get/path", {}).should eql "https://api.fullcontact.com/v2/get/path.json"
+    end
+  end
 end

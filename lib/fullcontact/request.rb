@@ -21,7 +21,7 @@ module FullContact
     # Perform an HTTP request
     def request(method, path, options, raw=false)
       if FullContact.options[:get_request_url_only]
-        return connection(raw).build_url(formatted_path(path), options)
+        return connection(raw).build_url(formatted_path(path), options).to_s
       end
       options[:apiKey] = FullContact.options[:api_key]
       unless FullContact.options[:access_token].nil?
