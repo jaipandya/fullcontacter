@@ -28,9 +28,9 @@ module FullContact
         options[:accessToken] = FullContact.options[:access_token]
       end
       response = connection(raw).send(method) do |request|
+        request.body = options.delete(:request_body) if options.include?(:request_body)
+        request.headers["Content-Type"] = options.delete(:content_type) if options.include?(:content_type)
         request.url(formatted_path(path), options)
-        request.headers["Content-Type"] = options[:content_type] if options.include?(:content_type)
-        request.body = options[:request_body] if options.include?(:request_body)
       end
       raw ? response : response.body
     end
