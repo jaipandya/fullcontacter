@@ -1,7 +1,7 @@
 require 'rspec'
 require 'webmock/rspec'
 require 'simplecov'
-require 'lib/fullcontact'
+require_relative '../lib/fullcontact'
 
 SimpleCov.start
 
