@@ -21,16 +21,16 @@ module FullContact
     # Perform an HTTP request
     def request(method, path, options, raw=false)
       if FullContact.options[:get_request_url_only]
-        return connection(raw).build_url(formatted_path(path), options)
+        return connection(raw).build_url(formatted_path(path), options).to_s
       end
       options[:apiKey] = FullContact.options[:api_key]
       unless FullContact.options[:access_token].nil?
         options[:accessToken] = FullContact.options[:access_token]
       end
       response = connection(raw).send(method) do |request|
+        request.body = options.delete(:request_body) if options.include?(:request_body)
+        request.headers["Content-Type"] = options.delete(:content_type) if options.include?(:content_type)
         request.url(formatted_path(path), options)
-        request.headers["Content-Type"] = options[:content_type] if options.include?(:content_type)
-        request.body = options[:request_body] if options.include?(:request_body)
       end
       raw ? response : response.body
     end
