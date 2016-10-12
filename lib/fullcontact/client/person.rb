@@ -19,6 +19,24 @@ module FullContact
         get('person', options)
       end
 
+      # Public: Uses the person method to request more information about a specific person by email_MD5 hash
+      #
+      # email_MD5   - The email address as MD5 hash of the person being looked up.
+      # options - Hash containing additional arguments (optional) (default: {})
+      #           :timeOutSeconds - Wait for specified time, before returning a 202 (optional)
+      #           :queue          - Enqueue this email for indexing (optional)
+      #           :callback       - If specified, the response will be wrapped as JSONP in a function call. (optional)
+      #           :webhookUrl     - Delivers lookup response at specified url (required for webhook calls)
+      #           :webhookId      - Id for tracking the webhook
+      #
+      # Example
+      #
+      #   response = FullContact.lookup_by_email_MD5('79d083b578589d5809922254639f6d99')
+      def lookup_by_email_MD5(email_MD5, options = {})
+        options[:emailMD5] = email_MD5
+        get('person', options)
+      end
+
       # Public: Uses the person method to request more information about a specific person by phone
       #
       # phone   - The phone number of the person being looked up.
