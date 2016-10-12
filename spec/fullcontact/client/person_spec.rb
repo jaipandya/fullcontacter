@@ -23,6 +23,19 @@ describe FullContact::Client::Person do
     end
   end
 
+  describe "#lookup_by_email_MD5" do
+    before do
+      stub_get("person.json").
+        with(:query => { :apiKey => "api_key", :emailMD5 => '12345'}).
+        to_return(:body => fixture("person.json"), :headers => {:content_type => "application/json; charset=utf-8"})
+    end
+
+    it "should get the list of contact lists" do
+      @client.lookup_by_email_MD5('12345')
+      a_get("person.json").with(:query => { :apiKey => "api_key", :emailMD5 => '12345' }).should have_been_made
+    end
+  end
+
   describe "#lookup_by_phone" do
     before do
       stub_get("person.json").
