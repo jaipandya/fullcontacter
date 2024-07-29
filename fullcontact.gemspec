@@ -5,7 +5,7 @@ require "fullcontact/version"
 Gem::Specification.new do |s|
   s.add_development_dependency 'maruku', '~> 0.6'
   s.add_development_dependency 'nokogiri', '~> 1.4'
-  s.add_development_dependency 'rake', '~> 0.9'
+  s.add_development_dependency 'rake', '~> 13.2'
   s.add_development_dependency 'rspec', '~> 2.6'
   s.add_development_dependency 'simplecov', '~> 0.4'
   s.add_development_dependency 'webmock', '~> 1.6'
@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'faraday', '~> 0.7.5'
   s.add_runtime_dependency 'faraday_middleware', '~> 0.8.6'
   s.add_runtime_dependency 'multi_json', '~> 1.3.0'
-  s.add_runtime_dependency 'multi_xml', '~> 0.4.2'
+  s.add_runtime_dependency 'multi_xml', '>= 0.4.2', '< 0.8.0'
   s.add_runtime_dependency 'rash', '~> 0.3.0'
 
   s.authors = "Brandon West, Jai Pandya, Prafulla Kiran"
